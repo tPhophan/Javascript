@@ -24,14 +24,21 @@ console.log(MONEY+money2);
 let x = 10, y= 20, z = 30;
 console.log(x+y+z);
 //--------------------------------------------------------------------
-let status = true; //boolean status
-console.log(typeof status);
-let nb = 20, db = 30.15; // number integer, number float
+let stat = true; //boolean status
+console.log(typeof(stat));
+let nb = 28, db = 30.15; // number integer, number float
 console.log(typeof nb);
 console.log(typeof db);
-let str = "Tossaphon"; // string
+let str = `Tossaphon age = ${nb}`; // string
+console.log(str)
 console.log(typeof str);
 let obj = {fName:"Tossaphon", lName:"Phophan"}; // object
 console.log(typeof obj);
+console.log("First Name = "+obj.fName);
+console.log("Last Name = "+obj.lName);
 let arr = [10,20,30,40]; // array
 console.log(typeof arr);
+let testNull;
+console.log(typeof testNull); // undefined
+testNull = null;
+console.log(typeof testNull); // object = NULL
