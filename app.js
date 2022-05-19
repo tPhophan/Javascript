@@ -42,3 +42,8 @@ let testNull;
 console.log(typeof testNull); // undefined
 testNull = null;
 console.log(typeof testNull); // object = NULL
+//--------------------------------------------------------------------
+let convert_nb_to_str = nb.toString()
+console.log(convert_nb_to_str);
+console.log(typeof convert_nb_to_str);
+console.log(typeof nb);
