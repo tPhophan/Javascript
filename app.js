@@ -4,7 +4,7 @@ document.write("<br>");
 document.write("<h1>Test 2</h1>");
 document.write("<p>Javascript เบื้องต้น</p>");
 
-//alert("Test Test.");
+alert("Test Test.");
 
 console.log("Hello World");
 console.error("Error");
@@ -63,3 +63,19 @@ console.log(`After : ${arr}`);
 for (let i = 0; i<arr.length; i++){
     console.log(`Index = ${i}, Value = ${arr[i]}, Type = ${typeof(arr[i])}`)
 }
+//--------------------------------------------------------------------
+//Operator + - * / % **
+let a = 5, b = 10;
+console.log("บวก  = "+a+b);
+console.log("ลบ  = "+a-b);
+console.log("คูณ  = "+a*b);
+console.log("หาร  = "+a/b);
+console.log("มอด  = "+a%b);
+console.log("ยกกำลัง  = "+a**b);
+//Operator == != > < >= <= (boolean)
+console.log(`a==b = ${a==b}`)
+console.log(`a!=b = ${a!=b}`)
+console.log(`a>b = ${a>b}`)
+console.log(`a<b = ${a<b}`)
+console.log(`a>=b = ${a>=b}`)
+console.log(`a<=b = ${a<=b}`)
