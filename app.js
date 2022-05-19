@@ -1,3 +1,5 @@
+//--------------------------------------------------------------------
+//การแสดงผลต่างๆ
 document.write("<br>");
 document.write("<h1>Test 2</h1>");
 document.write("<p>Javascript เบื้องต้น</p>");
@@ -8,6 +10,7 @@ console.log("Hello World");
 console.error("Error");
 console.warn("Warning");
 //--------------------------------------------------------------------
+//Comment
 // บรรทัดเดียว
 
 /*
@@ -16,6 +19,7 @@ console.warn("Warning");
 บรรทัด
 */
 //--------------------------------------------------------------------
+//Defined Variables
 const MONEY = 100; //เปลี่ยนแปลงค่าไม่ได้ พิมพ์ใหญ่
 let money2;
 money2 = 200; //เปลี่ยนแปลงค่าได้ พิมพ์เล็ก
@@ -24,6 +28,7 @@ console.log(MONEY+money2);
 let x = 10, y= 20, z = 30;
 console.log(x+y+z);
 //--------------------------------------------------------------------
+// Data Type
 let stat = true; //boolean status
 console.log(typeof(stat));
 let nb = 28, db = 30.15; // number integer, number float
@@ -36,14 +41,25 @@ let obj = {fName:"Tossaphon", lName:"Phophan"}; // object
 console.log(typeof obj);
 console.log("First Name = "+obj.fName);
 console.log("Last Name = "+obj.lName);
-let arr = [10,20,30,40]; // array
+let arr = [10,20,30,40]; // array, or = Array(10,20,30,40)
 console.log(typeof arr);
 let testNull;
 console.log(typeof testNull); // undefined
 testNull = null;
 console.log(typeof testNull); // object = NULL
 //--------------------------------------------------------------------
-let convert_nb_to_str = nb.toString()
+// Convert Data Type
+let convert_nb_to_str = nb.toString();
 console.log(convert_nb_to_str);
 console.log(typeof convert_nb_to_str);
 console.log(typeof nb);
+//--------------------------------------------------------------------
+// Array
+console.log(`Before : ${arr}`);
+arr[0] = "11";
+arr[2] = true;
+arr.push("Hi");
+console.log(`After : ${arr}`);
+for (let i = 0; i<arr.length; i++){
+    console.log(`Index = ${i}, Value = ${arr[i]}, Type = ${typeof(arr[i])}`)
+}
