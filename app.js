@@ -159,7 +159,33 @@ switch (month){
 }
 //--------------------------------------------------------------------
 // ทำซ้ำ (Loop)
-while(a<=b){
-    console.log("ค่า a = "+a);
+while(true){
+    console.log("while ค่า a = "+a);
     a++;
+    if (a>b) break;
+    else continue;
 }
+
+for (a;a>=5;a--){
+    console.log("for ค่า a = "+a);
+}
+
+do {
+    console.log("do while ค่า a = "+a)
+    a--;
+} while (a>=0);
+//--------------------------------------------------------------------
+// null, undefined, NaN
+let d; //undefined
+console.log(d);
+d = null; //null
+console.log(d);
+d = 7*"a"; //NaN
+console.log(d);
+//--------------------------------------------------------------------
+// Function
+function ft_hi(){
+    console.log("Hello World");
+}
+
+for (a;a<2;a++) ft_hi();
