@@ -66,16 +66,49 @@ for (let i = 0; i<arr.length; i++){
 //--------------------------------------------------------------------
 //Operator + - * / % **
 let a = 5, b = 10;
-console.log("บวก  = "+a+b);
-console.log("ลบ  = "+a-b);
-console.log("คูณ  = "+a*b);
-console.log("หาร  = "+a/b);
-console.log("มอด  = "+a%b);
-console.log("ยกกำลัง  = "+a**b);
+console.log("a+b  = "+(a+b));
+console.log("a-b  = "+(a-b));
+console.log("a*b =  = "+(a*b));
+console.log("a/b  = "+(a/b));
+console.log("a%b  = "+(a%b));
+console.log("a**b  = "+(a**b));
+//--------------------------------------------------------------------
 //Operator == != > < >= <= (boolean)
-console.log(`a==b = ${a==b}`)
-console.log(`a!=b = ${a!=b}`)
-console.log(`a>b = ${a>b}`)
-console.log(`a<b = ${a<b}`)
-console.log(`a>=b = ${a>=b}`)
-console.log(`a<=b = ${a<=b}`)
+console.log(`a==b = ${a==b}`);
+console.log(`a!=b = ${a!=b}`);
+console.log(`a>b = ${a>b}`);
+console.log(`a<b = ${a<b}`);
+console.log(`a>=b = ${a>=b}`);
+console.log(`a<=b = ${a<=b}`);
+//--------------------------------------------------------------------
+//Operator && || !
+console.log(`a==b && a!=b = ${(a==b) && (a!=b)}`);
+console.log(`!a==b && a!=b = ${!(a==b) && (a!=b)}`);
+console.log(`a==b || a!=b = ${(a==b) || (a!=b)}`);
+//--------------------------------------------------------------------
+//Operator ++ --
+console.log(`a++(Postfix) = ${a++}, ++a(Prefix) = ${++a}`);
+console.log(`a--(Postfix) = ${a--}, --a(Prefix) = ${--a}`);
+console.log("a = "+a);
+//--------------------------------------------------------------------
+//Compound Assignment += -= *= /= %=
+let c = 0;
+console.log("c = "+c);
+console.log(`c+=2 = ${c+=2}`);
+console.log(`c-=1 = ${c-=1}`);
+console.log(`c*=10 = ${c*=10}`);
+console.log(`c/=2 = ${c/=2}`);
+console.log(`c%=3 = ${c%=3}`);
+//--------------------------------------------------------------------
+console.log(`ลำดับความสำคัญของ Operator
+1. ()
+2. ++, -- (ซ้ายไปขวา)
+3. *, /, % (ซ้ายไปขวา)
+4. +, - (ซ้ายไปขวา)
+5. <, <=, >, >= (ซ้ายไปขวา)
+6. ==, != (ซ้ายไปขวา)
+7. && (ซ้ายไปขวา)
+8. || (ซ้ายไปขวา)
+9. =, +=, -=, *=, /=, %= *(ขวาไปซ้าย)*`)
+//--------------------------------------------------------------------
+//Control Structure
