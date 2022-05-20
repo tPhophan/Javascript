@@ -293,14 +293,25 @@ console.log(user.getYear());
 function ft_DeleteData(){
     let result = confirm("Delete Data ?");
     console.log(result);
-    result ?console.log("Deleted.") :console.log("Canceled.")
+    if (result){
+        console.log("Deleted.")
+    }
+    else{
+        console.log("Canceled.")
+    }
 }
 //--------------------------------------------------------------------
 //HTML DOM (Document Object Model)
+// Select Element in html
+// document.getElementById("id")
+// document.getElementByClass("class")
+// document.getElementByTagName("tag")
 const p = document.getElementsByTagName("p");
 console.log(p);
 const p_id = document.getElementById("demo");
 console.log(p_id);
+// document.querySelector(id(#). class(.), tag()) Select One
+// document.querySelectorAll(id(#). class(.), tag()) Select All
 const btn_class = document.querySelectorAll(".btn"); //id(#), class(.), Tag()
 console.log(btn_class);
 console.log(btn_class[2]);
@@ -319,3 +330,26 @@ function ft_ShowData(){
 
     box[0].setAttribute("class", "box"); // change class
 }
+//--------------------------------------------------------------------
+console.log(btn_class[0].innerHTML);
+const menu = document.getElementById("menu");
+let i = 0;
+// document.createElement(element) // สร้าง element
+function ft_addItem(){
+    let Item  = document.createElement("li");
+    Item.innerHTML = `<li id="item-${i}">Item ${i}</li>`
+    menu.appendChild(Item);
+    i++;
+}
+// document.removeElement(element) // ลบ element
+function ft_deleteItem(){
+    let item = document.getElementById(`item-${i-1}`);
+    if (item){
+        //menu.removeChild(item);
+    }
+    else{
+        return;
+    }
+}
+// document.appendChild(element) // นำ element ไปต่อใน node parent
+// document.replaceChild(new, old) // แทนที่ element
