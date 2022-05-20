@@ -243,5 +243,21 @@ console.log("toString() = ",arr.toString());
 //.join(sep)
 console.log("join() = ",arr.join("|"));
 //.pop()
-console.log("Delete Array Last Index : ",arr.pop());
+let last_Index = arr.pop();
+console.log("Last Index of Array : ",last_Index);
 console.log("After : ",arr);
+//--------------------------------------------------------------------
+//Concat Array
+let arr2 = ["ส้ม","องุ่น","กล้วย","มะม่วง"];
+let arr3 = ["Yellow", "red", "blue", "black"]
+let conArr = arr.concat(arr2, arr3);
+console.log(conArr.sort());
+//--------------------------------------------------------------------
+let points = [20, -5, -2, 40, 100, -500, 150];
+console.log(points);
+points.sort(function(a,b){return a-b}) // ASC (น้อยไปมาก)
+console.log(points);
+points.sort(function(a,b){return b-a}) // DESC (มากไปน้อย)
+console.log(points);
+//--------------------------------------------------------------------
+// Javascript Object
