@@ -261,3 +261,39 @@ points.sort(function(a,b){return b-a}) // DESC (มากไปน้อย)
 console.log(points);
 //--------------------------------------------------------------------
 // Javascript Object
+let product = {
+    name: "Mouse",
+    color: "black",
+    category: "computer",
+    size: "M",
+    price: 1500
+};
+console.log("ชื่อสินค้า = ",product.name)
+console.log("สีสินค้า = ",product["color"])
+console.log("หมวดหมู่ = ",product["category"])
+console.log("ราคา = ",product.price)
+// Javascript Object (Method)
+let user ={
+    name: "Tossaphon",
+    age: 28,
+    email: "Tossaphon_p@hotmail.com",
+    getUser:function(){
+        return "Name : " + this.name + ", E-mail : " + this.email;
+    },
+    getYear:function(){
+        let d = new Date()
+        return "Year : " + (d.getFullYear() - this.age);
+    }
+};
+
+console.log(user.getUser());
+console.log(user.getYear());
+//--------------------------------------------------------------------
+//Confirm Box
+function ft_DeleteData(){
+    let result = confirm("Delete Data ?");
+    console.log(result);
+    result ?console.log("Deleted.") :console.log("Canceled.")
+}
+//--------------------------------------------------------------------
+//HTML DOM (Document Object Model)
