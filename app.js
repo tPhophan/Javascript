@@ -303,7 +303,19 @@ const p_id = document.getElementById("demo");
 console.log(p_id);
 const btn_class = document.querySelectorAll(".btn"); //id(#), class(.), Tag()
 console.log(btn_class);
+console.log(btn_class[2]);
+const box = document.querySelectorAll("div");
+console.log(box);
 
 function ft_ShowData(){
     p_id.innerHTML = `x = ${x}, y = ${y}, z = ${z}`;
+    p_id.style.backgroundColor = "lime";
+    p_id.style.fontSize = "20px";
+
+    btn_class[1].style.backgroundColor = "lime";
+    btn_class[1].style.fontSize = "20px";
+
+    btn_class[2].setAttribute("class", "test_btn"); // change class
+
+    box[0].setAttribute("class", "box"); // change class
 }
