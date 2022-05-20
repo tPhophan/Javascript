@@ -59,6 +59,7 @@ console.log(`Before : ${arr}`);
 arr[0] = "11";
 arr[2] = true;
 arr.push("Hi");
+arr.push({myName:"Tossaphon",city:"Bangkok"})
 console.log(`After : ${arr}`);
 for (let i = 0; i<arr.length; i++){
     console.log(`Index = ${i}, Value = ${arr[i]}, Type = ${typeof(arr[i])}`)
@@ -183,9 +184,64 @@ console.log(d);
 d = 7*"a"; //NaN
 console.log(d);
 //--------------------------------------------------------------------
-// Function
+// Function (subject)
 function ft_hi(){
-    console.log("Hello World");
+    alert("Hello World");
 }
+//for (a;a<2;a++) ft_hi();
+//--------------------------------------------------------------------
+// Function (Arg)
+function ft_sum(x,y){
+    console.log("ผลรวม = "+(x+y));
+}
+ft_sum(5,99);
+//--------------------------------------------------------------------
+// Function (Return)
+function ft_getPass(){
+    return "a123456789"
+}
+let myPass = ft_getPass();
+console.log("Password : "+ft_getPass());
+console.log("Password : "+myPass);
+//--------------------------------------------------------------------
+// Function (Arg, Return)
+function ft_setSalary(salary){
+    let bonus = 1000;
+    return salary + bonus;
+}
+console.log("เงินเดือน + โบนัส = "+ft_setSalary(15000));
+//--------------------------------------------------------------------
+// Function (Arg, Return, Default)
+function ft_showMassage(myMassage = "Hello World"){
+    return "ข้อความของคุณคือ : "+myMassage;
+}
+let thisMass = ft_showMassage();
+let myMass = "Hi Bro";
 
-for (a;a<2;a++) ft_hi();
+console.log(thisMass)
+thisMass = ft_showMassage(myMass);
+console.log(thisMass)
+//--------------------------------------------------------------------
+// Local Variable
+// Global Variable
+//--------------------------------------------------------------------
+// Array Properties & Function
+console.log("Array = "+arr);
+console.log("Count Array = "+arr.length);
+console.log("Sort Array = "+arr.sort());
+//--------------------------------------------------------------------
+// foreach
+function myData(item){
+    if (typeof(item) == "object")console.log(`myName : ${item.myName}, city : ${item.city}`)
+    else console.log(item);
+}
+arr.forEach(myData);
+//--------------------------------------------------------------------
+// Convert Array to string
+//.toString()
+console.log("toString() = ",arr.toString());
+//.join(sep)
+console.log("join() = ",arr.join("|"));
+//.pop()
+console.log("Delete Array Last Index : ",arr.pop());
+console.log("After : ",arr);
