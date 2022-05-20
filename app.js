@@ -297,3 +297,13 @@ function ft_DeleteData(){
 }
 //--------------------------------------------------------------------
 //HTML DOM (Document Object Model)
+const p = document.getElementsByTagName("p");
+console.log(p);
+const p_id = document.getElementById("demo");
+console.log(p_id);
+const btn_class = document.querySelectorAll(".btn"); //id(#), class(.), Tag()
+console.log(btn_class);
+
+function ft_ShowData(){
+    p_id.innerHTML = `x = ${x}, y = ${y}, z = ${z}`;
+}
