@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <title>Javacript เบื้องต้น</title>
+        <title>Javascript เบื้องต้น</title>
         <!-- Internal -->
         <script type="text/javascript">
                 document.write("<h1><i>Test 1</i></h1>");
@@ -24,26 +24,44 @@
         <div>
             <button class="btn" onclick="ft_ShowData();">Show Data</button>
         </div>
-        <ul id="menu" onclick="ft_addItem();">Menu</ul>
         <div>
+            <ul id="menu" onclick="ft_addItem();">Menu</ul>
             <button onclick="ft_deleteItem();">Delete Last Item</button>
         </div>
-        <ul id="menu2">
-            Menu2
-            <li id="item2-1">item-A</li>
-            <li id="item2-2">item-B</li>
-            <li id="item2-3">item-C</li>
-            <li id="item2-4">item-D</li> 
-        </ul>
         <div>
+            <ul id="menu2">
+                Menu2
+                <li id="item2-1">item-A</li>
+                <li id="item2-2">item-B</li>
+                <li id="item2-3">item-C</li>
+                <li id="item2-4">item-D</li> 
+            </ul>
             <button onclick="ft_replaceItem();">Replace New Item to index 2</button>
         </div>
         <div id="box">
             <p> ง่ายๆ เลย Paragraph คือกลุ่มของประโยคที่ถูกเขียนขึ้นด้วยจุดประสงค์หรือหัวเรื่องเดียวกัน (Single Topic) นั่นเอง ซึ่งประโยคที่อยู่ใน Paragraph นั้นถูกเขียนขึ้นเพื่ออธิบายความคิดหลัก (main idea) ที่เกี่ยวข้องกับหัวข้อนั้นๆ </p>
         </div>
-        <button onclick="ft_addDarkMode();">Add Style</button>
-        <button onclick="ft_removeDarkMode();">Delete Style</button>
-        <button onclick="ft_toggleDarkMode();">Swap Style</button>
-        <script src="app.js"></script>
+        <div>
+            <button onclick="ft_addDarkMode();">Add Style</button>
+            <button onclick="ft_removeDarkMode();">Delete Style</button>
+            <button onclick="ft_toggleDarkMode();">Swap Style</button>
+        </div>
+        <div class="myBox">
+            <label for="">ชื่อ</label>
+            <input type="text" placeholder="ป้อนชื่อของคุณ" onfocus="ft_Highlight(this);" onblur="ft_Unhighlight(this);">
+            <textarea name="" id="" cols="30" rows="10" onfocus="ft_Highlight(this);" onblur="ft_Unhighlight(this);"></textarea>
+        </div>
+        <div>
+            <label for="">เลือกภาษาของคุณ</label>
+            <select name="" id="select">
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python" selected >Python</option>
+                <option value="Bootstrap">Bootstrap</option>
+            </select>
+            <p id="display">ภาษาที่คุณเลือก</p>
+            <a href="" onmouseover="ft_Highlight(this);" onmouseout="ft_Unhighlight(this);">Menu1</a>
+            <a href="http://www.google.com" target="_blank" id="link">Open Google</a>
+        </div>
     </body>
+    <script src="app.js"></script>
 </html>

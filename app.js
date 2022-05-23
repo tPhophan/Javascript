@@ -386,7 +386,37 @@ function ft_toggleDarkMode(){
 }
 //--------------------------------------------------------------------
 //DOM Event
-//onload (load tag)
+//onload (load object)
 function ft_welcome(){
     console.log("Welcome Bro.")
 }
+//onfocus (focus object)
+function ft_Highlight(obj){
+    obj.style.background = "yellow"
+}
+//onblur (unfocus object)
+function ft_Unhighlight(obj){
+    obj.style.background = "transparent"
+}
+//onchange
+const display = document.querySelector("#display")
+
+function ft_getMenu(obj){
+        console.log(obj.value.toUpperCase());
+        display.innerText = obj.value.toUpperCase();
+}
+//--------------------------------------------------------------------
+//Eventlistener
+//element.addEventListener(event, callback);
+const selector = document.querySelector("#select")
+
+selector.addEventListener('change', function(){
+    console.log(selector.value.toLowerCase());
+    display.innerText = selector.value.toUpperCase();
+});
+
+const link = document.querySelector("#link")
+
+link.addEventListener("click",function(){
+    console.log(link.href.toString());
+});
