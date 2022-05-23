@@ -335,21 +335,58 @@ console.log(btn_class[0].innerHTML);
 const menu = document.getElementById("menu");
 let i = 0;
 // document.createElement(element) // สร้าง element
+// document.appendChild(element) // นำ element ไปต่อใน node parent
 function ft_addItem(){
     let Item  = document.createElement("li");
     Item.innerHTML = `<li id="item-${i}">Item ${i}</li>`
-    menu.appendChild(Item);
+    menu.appendChild(Item.lastChild);
     i++;
 }
 // document.removeElement(element) // ลบ element
 function ft_deleteItem(){
-    let item = document.getElementById(`item-${i-1}`);
-    if (item){
-        //menu.removeChild(item);
+    let Item =  menu.lastChild
+    let child = menu.childNodes.length
+    if ((Item != null) && (child > 1)){
+        menu.removeChild(Item);
     }
     else{
         return;
     }
 }
-// document.appendChild(element) // นำ element ไปต่อใน node parent
 // document.replaceChild(new, old) // แทนที่ element
+const menu2 = document.getElementById("menu2");
+function ft_replaceItem(){
+    const newItem = document.createElement("li");
+    const item_C = document.querySelector("#item2-3")
+    newItem.innerText = "X";
+    if (item_C) menu2.replaceChild(newItem, item_C)
+}
+//--------------------------------------------------------------------
+// classList.add("class") เพิ่ม class style
+const cl_box = document.querySelector("#box").classList
+function ft_addDarkMode(){
+    cl_box.add("darkMode");
+}
+// classList.remove("class") ลบ class style
+function ft_removeDarkMode(){
+    cl_box.remove("darkMode");
+}
+// classList.toggle("class") สลับ class style
+// classList.contains("class") เปรียบเทียบ class style
+function ft_toggleDarkMode(){
+    cl_box.toggle("darkMode");
+    let stat = cl_box.contains("darkMode")
+    const box2 = document.querySelector("#box");
+    if (stat){
+        box2.style.color = "yellow";
+    }else{
+        box2.style.color = "red";
+    }
+    console.log("check class darkMode : ",stat);
+}
+//--------------------------------------------------------------------
+//DOM Event
+//onload (load tag)
+function ft_welcome(){
+    console.log("Welcome Bro.")
+}

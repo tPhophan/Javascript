@@ -11,7 +11,7 @@
         </script>
         <!-- External-->
     </head>
-    <body>
+    <body onload="ft_welcome();">
         <div>
             <button class="btn" onclick="ft_hi();">Hello World</button>
         </div>
@@ -26,8 +26,24 @@
         </div>
         <ul id="menu" onclick="ft_addItem();">Menu</ul>
         <div>
-            <button onclick="ft_deleteItem();">Delete Item</button>
+            <button onclick="ft_deleteItem();">Delete Last Item</button>
         </div>
+        <ul id="menu2">
+            Menu2
+            <li id="item2-1">item-A</li>
+            <li id="item2-2">item-B</li>
+            <li id="item2-3">item-C</li>
+            <li id="item2-4">item-D</li> 
+        </ul>
+        <div>
+            <button onclick="ft_replaceItem();">Replace New Item to index 2</button>
+        </div>
+        <div id="box">
+            <p> ง่ายๆ เลย Paragraph คือกลุ่มของประโยคที่ถูกเขียนขึ้นด้วยจุดประสงค์หรือหัวเรื่องเดียวกัน (Single Topic) นั่นเอง ซึ่งประโยคที่อยู่ใน Paragraph นั้นถูกเขียนขึ้นเพื่ออธิบายความคิดหลัก (main idea) ที่เกี่ยวข้องกับหัวข้อนั้นๆ </p>
+        </div>
+        <button onclick="ft_addDarkMode();">Add Style</button>
+        <button onclick="ft_removeDarkMode();">Delete Style</button>
+        <button onclick="ft_toggleDarkMode();">Swap Style</button>
+        <script src="app.js"></script>
     </body>
-    <script src="app.js"></script>
 </html>
